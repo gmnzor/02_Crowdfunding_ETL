@@ -1,0 +1,38 @@
+# Project 2
+# Melissa Morales, Nestor Gomez
+
+category
+-
+category_id VARCHAR(10) PK 
+category VARCHAR(50) 
+
+
+contacts
+-
+contact_id int PK
+first_name VARCHAR(50)
+last_name VARCHAR(50)
+email VARCHAR(50)
+
+
+subcategory
+-
+subcategory_id PK VARCHAR(10)
+subcategory VARCHAR(50)
+
+campaign
+-
+cf_id PK int
+contact_id int FK >- Contacts.contact_id 
+company_name VARCHAR(100)
+description VARCHAR(100)
+goal float
+pledged float
+outcome VARCHAR(20)
+backers_count int
+country VARCHAR(10)
+currency VARCHAR(10)
+launch_date date
+end_date date
+category_id VARCHAR(10) FK >- Category.category_id
+subcategory_id VARCHAR(10) FK >- Subcategory.subcategory_id
